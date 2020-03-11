@@ -54,6 +54,32 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             }
             
         ]
+        
+### Create a New Question [POST]
+
+You may create your own question using this action. It takes a JSON
+object containing a question and a collection of answers in the
+form of choices.
+
++ Request (application/json)
+
+        {
+            "version_android": "4.0.3",
+            "mobile_model": "Redmi 4",
+            "mobile_manufacturer": "Xiaomi"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /info
+
+    + Body
+
+            {
+                "message": "As informação foram adicioandas com sucesso!"
+            }
 
 
 ## Package [/packages/1]
@@ -133,33 +159,4 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 "days":"7",
                 "images":"https://media.staticontent.com/media/pictures/97ed9f46-5285-4e5f-939c-add941768328/400x400",
                 "url":"/packages/4"
-            }
-            
-            
-## AddInfo [/client]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "version_android": "4.0.3",
-            "mobile_model": "Redmi 4",
-            "mobile_manufacturer": "Xiaomi"
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /info
-
-    + Body
-
-            {
-                "message": "As informação foram adicioandas com sucesso!"
             }
