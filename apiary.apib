@@ -55,129 +55,17 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             
         ]
 
-## Teste [/questions/{id}]
 
-### Teste [GET]
-
-+ Parameters
-    + id (number)
-    
-+ Response 200 (application/json)
-
-    + Body
-
-        [
-            {
-              "actions": [
-                  {
-                      "name": "delete",
-                      "href": "/questions/1",
-                      "method": "DELETE"
-                  }
-              ],
-              "properties": {
-                  "published_at": "2014-11-11T08:40:51.620Z",
-                  "question": "Favourite programming language?"
-              },
-              "links": [
-                  {
-                      "rel": [ "self" ],
-                      "href": "/questions/1"
-                  }
-              ],
-              "entities": [
-                  {
-                      "actions": [
-                          {
-                              "name": "vote",
-                              "href": "/questions/1/choices/1",
-                              "method": "POST"
-                          }
-                      ],
-                      "rel": [ "choices" ],
-                      "properties": {
-                          "choice": "Swift",
-                          "votes": 2048
-                      },
-                      "links": [
-                          {
-                              "rel": [ "self" ],
-                              "href": "/questions/1/choices/1"
-                          }
-                      ]
-                  }, {
-                      "actions": [
-                          {
-                              "name": "vote",
-                              "href": "/questions/1/choices/2",
-                              "method": "POST"
-                          }
-                      ],
-                      "rel": [ "choices" ],
-                      "properties": {
-                          "choice": "Python",
-                          "votes": 1024
-                      },
-                      "links": [
-                          {
-                              "rel": [ "self" ],
-                              "href": "/questions/1/choices/2"
-                          }
-                      ]
-                  }, {
-                      "actions": [
-                          {
-                              "name": "vote",
-                              "href": "/questions/1/choices/3",
-                              "method": "POST"
-                          }
-                      ],
-                      "rel": [ "choices" ],
-                      "properties": {
-                          "choice": "Objective-C",
-                          "votes": 512
-                      },
-                      "links": [
-                          {
-                              "rel": [ "self" ],
-                              "href": "/questions/1/choices/3"
-                          }
-                      ]
-                  }, {
-                      "actions": [
-                          {
-                              "name": "vote",
-                              "href": "/questions/1/choices/4",
-                              "method": "POST"
-                          }
-                      ],
-                      "rel": [ "choices" ],
-                      "properties": {
-                          "choice": "Ruby",
-                          "votes": 256
-                      },
-                      "links": [
-                          {
-                              "rel": [ "self" ],
-                              "href": "/questions/1/choices/4"
-                          }
-                      ]
-                  }
-              ]
-          }
-        ]
-
-
-## Question [/packages/{id}]
+## Question [/packages/100]
 
 ### Question [GET]
 
-+ Parameters
-    + id (number)
-
 + Response 200 (application/json)
 
     + Body
+    {
+        
+    }
 
         [
             {
@@ -239,48 +127,93 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             }
         ]
 
-### Create a New Question [POST]
+## Package [/packages/1]
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
+### Package [GET]
 
-+ Request (application/json)
++ Response 200 (application/json)
 
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
 
     + Body
 
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "id": "1",
+                "name": "Pontal Praia Hotel",
+                "origin":"São Paulo",
+                "destiny": "Porto Seguro, Brasil"
+                "price": "978",
+                "days":"7",
+                "images":"https://media.staticontent.com/media/pictures/aa88664d-2ada-431b-959c-7e56d227d9d7/400x400",
+                "url":"/packages/1"
+            }
+            
+            
+## Package [/packages/2]
+
+### Package [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /package/2
+
+    + Body
+
+            {
+                "id": "1",
+                "name": "Pontal Praia Hotel",
+                "origin":"São Paulo",
+                "destiny": "Porto Seguro, Brasil"
+                "price": "978",
+                "days":"7",
+                "images":"https://media.staticontent.com/media/pictures/aa88664d-2ada-431b-959c-7e56d227d9d7/400x400",
+                "url":"/packages/1"
+            }
+            
+            
+## Package [/packages/3]
+
+### Package [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /package/3
+
+    + Body
+
+            {
+                "id": "1",
+                "name": "Pontal Praia Hotel",
+                "origin":"São Paulo",
+                "destiny": "Porto Seguro, Brasil"
+                "price": "978",
+                "days":"7",
+                "images":"https://media.staticontent.com/media/pictures/aa88664d-2ada-431b-959c-7e56d227d9d7/400x400",
+                "url":"/packages/1"
+            }
+
+## Package [/packages/4]
+
+### Package [GET]
+
++ Response 200 (application/json)
+
+    + Headers
+
+            Location: /package/4
+
+    + Body
+
+            {
+                "id": "1",
+                "name": "Pontal Praia Hotel",
+                "origin":"São Paulo",
+                "destiny": "Porto Seguro, Brasil"
+                "price": "978",
+                "days":"7",
+                "images":"https://media.staticontent.com/media/pictures/aa88664d-2ada-431b-959c-7e56d227d9d7/400x400",
+                "url":"/packages/1"
             }
