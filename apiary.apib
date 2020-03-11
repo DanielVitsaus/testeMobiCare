@@ -55,6 +55,113 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             
         ]
 
+## Teste [/questions/{id}]
+
+### Teste [GET]
+
++ Parameters
+    + id (number)
+    
++ Response 200 (application/json)
+
+{
+      "actions": [
+          {
+              "name": "delete",
+              "href": "/questions/1",
+              "method": "DELETE"
+          }
+      ],
+      "properties": {
+          "published_at": "2014-11-11T08:40:51.620Z",
+          "question": "Favourite programming language?"
+      },
+      "links": [
+          {
+              "rel": [ "self" ],
+              "href": "/questions/1"
+          }
+      ],
+      "entities": [
+          {
+              "actions": [
+                  {
+                      "name": "vote",
+                      "href": "/questions/1/choices/1",
+                      "method": "POST"
+                  }
+              ],
+              "rel": [ "choices" ],
+              "properties": {
+                  "choice": "Swift",
+                  "votes": 2048
+              },
+              "links": [
+                  {
+                      "rel": [ "self" ],
+                      "href": "/questions/1/choices/1"
+                  }
+              ]
+          }, {
+              "actions": [
+                  {
+                      "name": "vote",
+                      "href": "/questions/1/choices/2",
+                      "method": "POST"
+                  }
+              ],
+              "rel": [ "choices" ],
+              "properties": {
+                  "choice": "Python",
+                  "votes": 1024
+              },
+              "links": [
+                  {
+                      "rel": [ "self" ],
+                      "href": "/questions/1/choices/2"
+                  }
+              ]
+          }, {
+              "actions": [
+                  {
+                      "name": "vote",
+                      "href": "/questions/1/choices/3",
+                      "method": "POST"
+                  }
+              ],
+              "rel": [ "choices" ],
+              "properties": {
+                  "choice": "Objective-C",
+                  "votes": 512
+              },
+              "links": [
+                  {
+                      "rel": [ "self" ],
+                      "href": "/questions/1/choices/3"
+                  }
+              ]
+          }, {
+              "actions": [
+                  {
+                      "name": "vote",
+                      "href": "/questions/1/choices/4",
+                      "method": "POST"
+                  }
+              ],
+              "rel": [ "choices" ],
+              "properties": {
+                  "choice": "Ruby",
+                  "votes": 256
+              },
+              "links": [
+                  {
+                      "rel": [ "self" ],
+                      "href": "/questions/1/choices/4"
+                  }
+              ]
+          }
+      ]
+  }
 
 ## Question [/packages/{id}]
 
