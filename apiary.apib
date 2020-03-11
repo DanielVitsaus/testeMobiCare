@@ -67,20 +67,25 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
         [
             {
-                "links": [
+                "_links": [
                     {
                         "rel": [ "self" ],
                         "href": "/package/1"
                     }
                 ],
-                "id": "1",
-                "name": "Pontal Praia Hotel",
-                "origin":"São Paulo",
-                "destiny": "Porto Seguro, Brasil"
-                "price": "978",
-                "days":"7",
-                "images":"https://media.staticontent.com/media/pictures/aa88664d-2ada-431b-959c-7e56d227d9d7/400x400",
-                "url":"/packages/1"
+                "_embedded" : {
+                    "_links": {
+                      "self": { "self": "/package/1" }
+                    },
+                    "id": "1",
+                    "name": "Pontal Praia Hotel",
+                    "origin":"São Paulo",
+                    "destiny": "Porto Seguro, Brasil"
+                    "price": "978",
+                    "days":"7",
+                    "images":"https://media.staticontent.com/media/pictures/aa88664d-2ada-431b-959c-7e56d227d9d7/400x400",
+                    "url":"/packages/1"
+                }
             },
             {
                 "links": [
