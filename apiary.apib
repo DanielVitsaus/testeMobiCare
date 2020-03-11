@@ -56,7 +56,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
         ]
 
 
-## Question [/package/{id}]
+## Question [/packages/{id}]
 
 ### Question [GET]
 
@@ -67,15 +67,15 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
         [
             {
-                "_links": [
+                "links": [
                     {
                         "rel": [ "self" ],
-                        "href": "/package/1"
+                        "href": "/packages/1"
                     }
                 ],
-                "_embedded" : {
+                "entities" : {
                     "_links": {
-                      "self": { "self": "/package/1" }
+                        "self": { "self": "/packages/1" }
                     },
                     "id": "1",
                     "name": "Pontal Praia Hotel",
